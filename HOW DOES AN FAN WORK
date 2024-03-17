@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How a Fan Works</title>
+</head>
+<body>
+
+<h1>How a Fan Works</h1>
+
+<p>A fan works by using the rotation of blades to create airflow, which helps to circulate air and cool down the surrounding environment.</p>
+
+<h2>Main Components:</h2>
+<ul>
+  <li><strong>Blades:</strong> The blades are mounted on a central hub and are angled to create airflow when rotated.</li>
+  <li><strong>Motor:</strong> The motor provides the power to rotate the blades.</li>
+  <li><strong>Housing:</strong> The housing surrounds the blades and motor, directing the airflow and providing stability.</li>
+</ul>
+
+<h2>Operation:</h2>
+<ol>
+  <li>The motor provides power to the fan, causing the blades to rotate.</li>
+  <li>As the blades rotate, they push air in the direction they are facing.</li>
+  <li>The angled design of the blades creates a pressure difference, causing air to move from areas of high pressure to areas of low pressure.</li>
+  <li>This movement of air creates airflow, which helps to cool down the surrounding environment.</li>
+  <li>The housing of the fan helps to direct the airflow in a specific direction and provides stability to the fan.</li>
+</ol>
+
+<p>This process continues as long as the fan is powered on, providing continuous airflow to the surrounding area.</p>
+
+</body>
+</html>
