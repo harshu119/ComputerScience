@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Names and Codes</title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+
+<h2>Color Names and Codes</h2>
+
+<table>
+  <tr>
+    <th>Color Name</th>
+    <th>Color Code</th>
+  </tr>
+  <tr>
+    <td>Red</td>
+    <td>#FF0000</td>
+  </tr>
+  <tr>
+    <td>Green</td>
+    <td>#00FF00</td>
+  </tr>
+  <tr>
+    <td>Blue</td>
+    <td>#0000FF</td>
+  </tr>
+  <!-- Add more colors as needed -->
+</table>
+
+</body>
+</html>
