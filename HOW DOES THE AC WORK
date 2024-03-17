@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How an Air Conditioner Works</title>
+</head>
+<body>
+
+<h1>How an Air Conditioner Works</h1>
+
+<p>An air conditioner works by taking in warm air from the environment, cooling it down, and then circulating the cooled air back into the room.</p>
+
+<h2>Main Components:</h2>
+<ul>
+  <li><strong>Compressor:</strong> The compressor pressurizes the refrigerant, which increases its temperature.</li>
+  <li><strong>Condenser Coil:</strong> The hot, pressurized refrigerant passes through the condenser coil, where it releases heat and condenses into a liquid.</li>
+  <li><strong>Expansion Valve:</strong> The liquid refrigerant passes through the expansion valve, which causes it to expand and cool down rapidly.</li>
+  <li><strong>Evaporator Coil:</strong> The cooled refrigerant passes through the evaporator coil, absorbing heat from the indoor air and cooling it down.</li>
+  <li><strong>Fan:</strong> The fan circulates air over the evaporator coil, distributing the cooled air throughout the room.</li>
+</ul>
+
+<h2>Operation:</h2>
+<ol>
+  <li>The compressor pressurizes the refrigerant, raising its temperature.</li>
+  <li>The hot refrigerant flows through the condenser coil, where it releases heat and condenses into a liquid.</li>
+  <li>The liquid refrigerant passes through the expansion valve, causing it to rapidly expand and cool down.</li>
+  <li>The cooled refrigerant flows through the evaporator coil, absorbing heat from the indoor air.</li>
+  <li>The fan blows air over the evaporator coil, cooling it down.</li>
+  <li>The cooled air is circulated back into the room, lowering the temperature.</li>
+</ol>
+
+<p>This process continues until the desired temperature is reached, maintaining a comfortable indoor environment.</p>
+
+</body>
+</html>
