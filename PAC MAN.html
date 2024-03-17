@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man Example</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        #pacman {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ffec00;
+            border-radius: 50%;
+            animation: eat 0.5s infinite alternate;
+        }
+
+        @keyframes eat {
+            0% {
+                clip-path: polygon(100% 100%, 100% 100%, 100% 0%);
+            }
+            100% {
+                clip-path: polygon(100% 100%, 100% 0%, 0% 50%, 100% 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="pacman"></div>
+
+<script>
+    const pacman = document.getElementById("pacman");
+
+    // Move Pac-Man across the screen
+    let positionX = 0;
+    let direction = 1; // 1 for right, -1 for left
+
+    function movePacman() {
+        positionX += 5 * direction;
+        pacman.style.left = positionX + "px";
+
+        // Reverse direction when reaching the edges
+        if (positionX >= window.innerWidth - pacman.offsetWidth || positionX <= 0) {
+            direction *= -1;
+        }
+
+        requestAnimationFrame(movePacman);
+    }
+
+    movePacman();
+</script>
+
+</body>
+</html>

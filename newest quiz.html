@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <form action="submit_checkbox_quiz.php" method="post">
+
+        <div class="question">
+            <p>1. Which of the following are colors?</p>
+            <div class="options">
+                <label><input type="checkbox" name="q1[]" value="red"> Red</label>
+                <label><input type="checkbox" name="q1[]" value="banana"> Banana</label>
+                <label><input type="checkbox" name="q1[]" value="blue"> Blue</label>
+                <label><input type="checkbox" name="q1[]" value="apple"> Apple</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. Select the programming languages:</p>
+            <div class="options">
+                <label><input type="checkbox" name="q2[]" value="java"> Java</label>
+                <label><input type="checkbox" name="q2[]" value="potato"> Potato</label>
+                <label><input type="checkbox" name="q2[]" value="python"> Python</label>
+                <label><input type="checkbox" name="q2[]" value="orange"> Orange</label>
+            </div>
+        </div>
+
+        <!-- Add more questions as needed -->
+
+        <input type="submit" value="Submit Quiz">
+    </form>
+</div>
+
+</body>
+</html>

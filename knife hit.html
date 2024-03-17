@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knife Hit Game</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  #game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    border: 2px solid #000;
+    background-color: #ddd;
+    overflow: hidden;
+  }
+  #knife {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 80px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: bottom 0.2s;
+  }
+  #knife.hit {
+    bottom: 50px;
+  }
+  #target {
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background-color: #ff5722;
+    border-radius: 50%;
+  }
+</style>
+</head>
+<body>
+
+<h1>Knife Hit Game</h1>
+
+<div id="game-container">
+  <div id="target"></div>
+  <div id="knife"></div>
+</div>
+
+<script>
+  const knife = document.getElementById('knife');
+  const target = document.getElementById('target');
+  let isHit = false;
+
+  // Function to throw knife
+  function throwKnife() {
+    if (!isHit) {
+      knife.classList.add('hit');
+      isHit = true;
+      // Check if knife hits the target
+      setTimeout(() => {
+        const knifePosition = knife.getBoundingClientRect();
+        const targetPosition = target.getBoundingClientRect();
+        if (knifePosition.left >= targetPosition.left && knifePosition.right <= targetPosition.right &&
+            knifePosition.top >= targetPosition.top && knifePosition.bottom <= targetPosition.bottom) {
+          alert('You hit the target!');
+        } else {
+          alert('You missed the target!');
+        }
+        resetGame();
+      }, 200);
+    }
+  }
+
+  // Function to reset game
+  function resetGame() {
+    knife.classList.remove('hit');
+    isHit = false;
+  }
+
+  // Event listener for throwing knife
+  document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+      throwKnife();
+    }
+  });
+</script>
+
+</body>
+</html>

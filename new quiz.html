@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <form action="submit_quiz.php" method="post">
+
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a"> a) Berlin</label>
+                <label><input type="radio" name="q1" value="b"> b) Paris</label>
+                <label><input type="radio" name="q1" value="c"> c) Madrid</label>
+                <label><input type="radio" name="q1" value="d"> d) Rome</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>2. What is the largest planet in our solar system?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> a) Venus</label>
+                <label><input type="radio" name="q2" value="b"> b) Jupiter</label>
+                <label><input type="radio" name="q2" value="c"> c) Earth</label>
+                <label><input type="radio" name="q2" value="d"> d) Mars</label>
+            </div>
+        </div>
+
+        <!-- Add more questions as needed -->
+
+        <input type="submit" value="Submit Quiz">
+    </form>
+</div>
+
+</body>
+</html>

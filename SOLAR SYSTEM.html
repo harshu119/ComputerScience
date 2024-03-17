@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #4285f4;
+        }
+
+        .mercury { width: 20px; height: 20px; top: 40px; left: 50px; }
+        .venus   { width: 30px; height: 30px; top: 80px; left: 120px; }
+        .earth   { width: 35px; height: 35px; top: 140px; left: 200px; }
+        .mars    { width: 25px; height: 25px; top: 220px; left: 280px; }
+        .jupiter { width: 70px; height: 70px; top: 330px; left: 380px; }
+        .saturn  { width: 60px; height: 60px; top: 480px; left: 500px; }
+        .uranus  { width: 50px; height: 50px; top: 640px; left: 640px; }
+        .neptune { width: 45px; height: 45px; top: 820px; left: 780px; }
+    </style>
+    <title>Solar System</title>
+</head>
+<body>
+
+    <div class="sun">
+        <div class="planet mercury"></div>
+        <div class="planet venus"></div>
+        <div class="planet earth"></div>
+        <div class="planet mars"></div>
+        <div class="planet jupiter"></div>
+        <div class="planet saturn"></div>
+        <div class="planet uranus"></div>
+        <div class="planet neptune"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #word-display {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #guess-input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #submit-button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hangman Game</h1>
+
+<div id="word-display"></div>
+
+<label for="guess-input">Guess a letter:</label>
+<input type="text" id="guess-input" maxlength="1">
+<button id="submit-button" onclick="submitGuess()">Submit Guess</button>
+
+<p id="result"></p>
+
+<script>
+    const wordBank = ["hangman", "javascript", "developer", "programming", "html", "css", "gamedev"];
+    let hiddenWord = "";
+    let guessedLetters = [];
+
+    function startGame() {
+        // Select a random word from the word bank
+        hiddenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+
+        // Display underscores for each letter in the word
+        const displayWord = hiddenWord.split('').map(letter => guessedLetters.includes(letter) ? letter : '_').join(' ');
+        document.getElementById("word-display").textContent = displayWord;
+
+        // Clear previous guesses
+        guessedLetters = [];
+
+        // Clear input field
+        document.getElementById("guess-input").value = "";
+
+        // Clear result message
+        document.getElementById("result").textContent = "";
+    }
+
+    function submitGuess() {
+        const guessInput = document.getElementById("guess-input");
+        const guess = guessInput.value.toLowerCase();
+
+        // Check if the guess is a single letter
+        if (guess.length !== 1 || !/^[a-z]$/.test(guess)) {
+            document.getElementById("result").textContent = "Please enter a valid single letter.";
+            return;
+        }
+
+        // Check if the letter has already been guessed
+        if (guessedLetters.includes(guess)) {
+            document.getElementById("result").textContent = "You already guessed that letter.";
+            return;
+        }
+
+        // Add the guess to the list of guessed letters
+        guessedLetters.push(guess);
+
+        // Update the displayed word
+        const displayWord = hiddenWord.split('').map(letter => guessedLetters.includes(letter) ? letter : '_').join(' ');
+        document.getElementById("word-display").textContent = displayWord;
+
+        // Check if the player won
+        if (!displayWord.includes('_')) {
+            document.getElementById("result").textContent = "Congratulations! You guessed the word!";
+        }
+    }
+
+    // Start the game when the page loads
+    startGame();
+</script>
+
+</body>
+</html>
